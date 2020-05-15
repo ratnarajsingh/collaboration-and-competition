@@ -135,7 +135,7 @@ class MADDPG():
             actions = self.actor_local(states).squeeze().cpu().data.numpy()
             self.actor_local.train()
             if self.n_step == 0:
-                for i in range(len(ret)):
+                for i in range(len(actions)):
                     actions[i] += noise * self.noise[i].sample()
         return actions
     
