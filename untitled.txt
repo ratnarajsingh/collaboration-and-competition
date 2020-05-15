@@ -1,0 +1,18 @@
+GRADIENT_CLIP = 5,
+               ACTIVATION = F.relu,
+               TAU=1e-3,
+               UPDATE_EVERY=32,
+               TRANSFER_EVERY=2,
+               UPDATE_LOOP=16,
+               ADD_NOISE_EVERY=1,
+               BOOTSTRAP_SIZE=4,
+               LR_CRITIC = 3e-4,
+               LR_ACTOR = 3e-4, 
+               MEMORY_SIZE = 1e5,
+               BATCH_SIZE = 128
+1. Baseline 
+    1700s
+2. memory size : 1e6, batch : 128
+    2900s
+3. Gradclip = 3, update_loop = 12, update_every = 8
+    1580
